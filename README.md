@@ -4,7 +4,7 @@ Translation of [Pattern-defeating quicksort (pdqsort) by Orson Peters](https://g
 
 Inspired by [Quicksort as a C macro](https://github.com/svpv/qsort). This implementation, however, has the pattern-defeating capabilities as well, making it of *O(n log n)* complexity pesimistically, in-place in terms of memory, and reasonably fast.
 
-# Usage
+## Usage
 
 Include the header and use `pdqsort` the same way as you would use [`qsort`](https://en.cppreference.com/w/c/algorithm/qsort) otherwise.
 
