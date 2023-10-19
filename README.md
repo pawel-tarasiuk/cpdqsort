@@ -2,7 +2,7 @@
 
 Translation of [Pattern-defeating quicksort (pdqsort) by Orson Peters](https://github.com/orlp/pdqsort) to a C-compilant macro.
 
-Inspired by [Quicksort as a C macro](https://github.com/svpv/qsort). This implementation, however, has the pattern-defeating capabilities as well, making it of O(n log n) complexity pesimistically, in-place and reasonably fast.
+Inspired by [Quicksort as a C macro](https://github.com/svpv/qsort). This implementation, however, has the pattern-defeating capabilities as well, making it of *O(n log n)* complexity pesimistically, in-place in terms of memory, and reasonably fast.
 
 # Usage
 
