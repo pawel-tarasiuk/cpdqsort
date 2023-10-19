@@ -27,9 +27,6 @@
 
 #include <string.h>
 
-#if (__STDC_VERSION__ + 0 < 199901L) && (__STRICT_ANSI__ + 0 == 1)
-    #define inline
-#endif
 
 /* Should the heapsort macro be defined? */
 #ifndef CPDQS_NO_EXPORT_HEAPSORT
