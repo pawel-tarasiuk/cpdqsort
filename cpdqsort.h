@@ -31,6 +31,11 @@
     #define inline
 #endif
 
+/* Should the heapsort macro be defined? */
+#ifndef CPDQS_NO_EXPORT_HEAPSORT
+#define CPDQS_EXPORT_HEAPSORT 1
+#endif
+
 /* Partitions below this size are sorted using insertion sort. */
 #define CPDQS_ISRT_THRESHOLD 24
 
@@ -359,14 +364,15 @@ no block quicksort is applied here for simplicity.
     }
 
 
-/* Let's pretend it's a function */
-#define heap_sort(base, nmemb, _size, _compar) { \
-        size_t CPDQS_V(size) = (_size); \
-        void *CPDQS_V(begin) = NULL; \
-        int (* CPDQS_V(compar))(void const *, void const *) = (_compar); \
-        CPDQS_HSRTM((base), (nmemb)); \
-    }
-
+#if CPDQS_EXPORT_HEAPSORT + 0 == 1
+    /* Let's pretend it's a function */
+    #define heapsort(base, nmemb, _size, _compar) { \
+            size_t CPDQS_V(size) = (_size); \
+            void *CPDQS_V(begin) = NULL; \
+            int (* CPDQS_V(compar))(void const *, void const *) = (_compar); \
+            CPDQS_HSRTM((base), (nmemb)); \
+        }
+#endif
 
 /* pdqsort main logic */
 #define CPDQS_PDQSRTL(base, nmemb) { \
